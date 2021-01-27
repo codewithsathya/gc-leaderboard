@@ -201,6 +201,7 @@ async function updateTotal() {
   for (let index in keyValueBranches) {
     for (let eachBranch of branches) {
       if (eachBranch.branch == index) {
+        console.log(keyValueBranches[index]);
         eachBranch.set({ total: keyValueBranches[index] });
         await eachBranch.save();
       }
